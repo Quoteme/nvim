@@ -19,5 +19,8 @@ return {
         mappings = true,
       })
     end,
+    cond = function()
+      return not vim.g.vscode
+    end,
   },
 }

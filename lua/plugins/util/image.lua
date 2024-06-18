@@ -1,0 +1,21 @@
+return {
+  -- -- TODO: currently disabled, because idk how to install the lua magick module
+  -- {
+  --   "vhyrro/luarocks.nvim",
+  --   priority = 1001, -- this plugin needs to run before anything else
+  --   opts = {
+  --     rocks = { "magick" },
+  --   },
+  -- },
+  -- {
+  --   "3rd/image.nvim",
+  --   depends = "vhyrro/luarocks.nvim",
+  --   -- configure to use kitty
+  --   config = function()
+  --     require("image").setup({
+  --       -- enable kitty integration
+  --       backend = "kitty",
+  --     })
+  --   end,
+  -- },
+}

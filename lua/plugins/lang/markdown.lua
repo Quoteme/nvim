@@ -4,6 +4,9 @@ return {
     config = function()
       vim.fn["mkdp#util#install"]()
     end,
+    cond = function()
+      return not vim.g.vscode
+    end,
   },
   {
     "jubnzv/mdeval.nvim",
