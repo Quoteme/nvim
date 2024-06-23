@@ -6,6 +6,7 @@ return {
   {
     "smoka7/multicursors.nvim",
     event = "VeryLazy",
+    cond = not vim.g.vscode,
     dependencies = {
       'smoka7/hydra.nvim',
     },
