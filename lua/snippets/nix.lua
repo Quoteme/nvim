@@ -68,6 +68,27 @@ ls.add_snippets("nix", {
 
   s(
     {
+      trig = "pkgs.writeShellApplication",
+      name = "Create a shell application",
+    },
+    fmt(
+      [[
+(pkgs.writeShellScriptBin "myapp" /*bash*/ ''
+  #!/usr/bin/env bash
+  ${pkgs.toilet}/bin/toilet -f mono12 -F metal "<message>"
+'')
+  ]],
+      {
+        message = i(1, "Hello, world!"),
+      },
+      {
+        delimiters = "<>",
+      }
+    )
+  ),
+
+  s(
+    {
       trig = "shell",
       name = "Default mkShell template",
       dscr = "simple mkShell template",
