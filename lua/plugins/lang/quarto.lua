@@ -96,9 +96,10 @@ return {
       vim.g.slime_target = "neovim"
       vim.g.slime_python_ipython = 1
 
-      require("which-key").register({
-        ["<leader>cm"] = { mark_terminal, "mark terminal" },
-        ["<leader>cs"] = { set_terminal, "set terminal" },
+      local wk = require("which-key")
+      wk.add({
+        { "<leader>cm", ":lua mark_terminal()<cr>", desc = "mark terminal" },
+        { "<leader>cs", ":lua set_terminal()<cr>", desc = "set terminal" },
       })
     end,
   },
