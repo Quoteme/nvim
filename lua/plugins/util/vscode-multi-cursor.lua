@@ -4,8 +4,8 @@ return {
   cond = not not vim.g.vscode,
   opts = {},
   config = function()
-    vim.keymap.set({ "n", "x", "i" }, '<C-d>', 'mciw*<Cmd>nohl<CR>', { remap = true })
-    vim.keymap.set({ "n", "x", "i" }, '<C-u>', 'mciw#<Cmd>nohl<CR>', { remap = true })
+    vim.keymap.set({ "n", "x", "i" }, "<C-n>", "mciw*<Cmd>nohl<CR>", { remap = true })
+    vim.keymap.set({ "n", "x", "i" }, "<C-S-n>", "mciw#<Cmd>nohl<CR>", { remap = true })
     -- vim.keymap.set({ "n", "x", "i" }, "<C-d>", function()
     --   require("vscode-multi-cursor").addSelectionToNextFindMatch()
     -- end, { remap = true })
