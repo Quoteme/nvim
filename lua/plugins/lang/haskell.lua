@@ -21,6 +21,14 @@ return {
     -- load the plugin when opening one of the following file types
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
+  {
+    "mrcjkb/neotest-haskell",
+    -- TODO: temporarily disabled, because IDK how to set up luarocks for neovim on nixos?
+    enabled = false,
+    -- opts = {
+    --   rocks = { hererocks = true },
+    -- }
+  },
   -- {
   --   "mrcjkb/haskell-tools.nvim",
   --   keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
