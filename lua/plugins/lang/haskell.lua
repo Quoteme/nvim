@@ -2,22 +2,50 @@ return {
   -- haskell
   {
     "mrcjkb/haskell-tools.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
+    keys = {
+      {
+        "<leader>cl",
+        function()
+          vim.lsp.codelens.run()
+        end,
+        desc = "Refresh code lenses",
+      },
+      {
+        "<leader>hs",
+        function()
+          require("haskell-tools").hoogle.hoogle_signature()
+        end,
+        desc = "Hoogle search for the type signature of the definition under the cursor",
+      },
+      {
+        "<leader>ea",
+        function()
+          require("haskell-tools").lsp.buf_eval_all()
+        end,
+        desc = "Evaluate all code snippets",
+      },
+      {
+        "<leader>rr",
+        function()
+          require("haskell-tools").repl.toggle()
+        end,
+        desc = "Toggle a GHCi repl for the current package",
+      },
+      {
+        "<leader>rf",
+        function()
+          require("haskell-tools").repl.toggle(vim.api.nvim_buf_get_name(0))
+        end,
+        desc = "Toggle a GHCi repl for the current buffer",
+      },
+      {
+        "<leader>rq",
+        function()
+          require("haskell-tools").repl.quit()
+        end,
+        desc = "Quit the GHCi repl",
+      },
     },
-    branch = "2.x.x",
-    config = function()
-      vim.g.haskell_tools = {
-        hls = {
-          on_attach = function(client, bufnr)
-            local opts = { buffer = bufnr }
-            vim.keymap.nnoremap({ "<space>ca", vim.lsp.codelens.run, opts })
-            vim.keymap.nnoremap({ "<space>hs", require("haskell-tools").hoogle.hoogle_signature, opts })
-            vim.keymap.nnoremap({ "<space>ea", require("haskell-tools").lsp.buf_eval_all, opts })
-          end,
-        },
-      }
-    end,
     -- load the plugin when opening one of the following file types
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
@@ -29,50 +57,4 @@ return {
     --   rocks = { hererocks = true },
     -- }
   },
-  -- {
-  --   "mrcjkb/haskell-tools.nvim",
-  --   keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-telescope/telescope.nvim",
-  --   },
-  --   cond = function()
-  --     return not vim.g.vscode
-  --   end,
-  --   branch = "2.x.x",
-  --   ft = "haskell",
-  --   opts = function(_, opts)
-  --     local ht = require("haskell-tools")
-  --     local def_opts = { noremap = true, silent = true }
-  --     ht.start_or_attach({
-  --       hls = {
-  --         on_attach = function(client, bufnr)
-  --           local opts = vim.tbl_extend("keep", def_opts, { buffer = bufnr })
-  --           -- haskell-language-server relies heavily on codeLenses,
-  --           -- so auto-refresh (see advanced configuration) is enabled by default
-  --           vim.keymap.set("n", "<space>ca", vim.lsp.codelens.run, opts)
-  --           vim.keymap.set("n", "<space>hs", ht.hoogle.hoogle_signature, opts)
-  --           vim.keymap.set("n", "<space>ea", ht.lsp.buf_eval_all, opts)
-  --         end,
-  --       },
-  --     })
-  --
-  --     -- Suggested keymaps that do not depend on haskell-language-server:
-  --     local bufnr = vim.api.nvim_get_current_buf()
-  --     -- set buffer = bufnr in ftplugin/haskell.lua
-  --     local opts = { noremap = true, silent = true, buffer = bufnr }
-  --
-  --     -- Toggle a GHCi repl for the current package
-  --     vim.keymap.set("n", "<leader>rr", ht.repl.toggle, opts)
-  --     -- Toggle a GHCi repl for the current buffer
-  --     vim.keymap.set("n", "<leader>rf", function()
-  --       ht.repl.toggle(vim.api.nvim_buf_get_name(0))
-  --     end, def_opts)
-  --     vim.keymap.set("n", "<leader>rq", ht.repl.quit, opts)
-  --
-  --     -- Detect nvim-dap launch configurations
-  --     -- (requires nvim-dap and haskell-debug-adapter)
-  --     ht.dap.discover_configurations(bufnr)
-  --   end,
-  -- },
 }
