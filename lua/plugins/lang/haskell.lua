@@ -2,6 +2,7 @@ return {
   -- haskell
   {
     "mrcjkb/haskell-tools.nvim",
+    version = "^4",
     keys = {
       {
         "<leader>cl",
