@@ -7,6 +7,13 @@ return {
     opts = {
       -- leave empty for the default config or define your own sortables in here. They will add, rather than
       -- replace, the defaults for the given filetype
+      sortables = {
+        nix = {
+          body = {
+            node = "binding",
+          },
+        },
+      },
     },
   },
 }
