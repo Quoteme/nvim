@@ -44,4 +44,8 @@ return {
       }
     end,
   },
+  {
+    "Vaisakhkm2625/hologram-math-preview.nvim",
+    dependencies = { "edluffy/hologram.nvim" },
+  },
 }
