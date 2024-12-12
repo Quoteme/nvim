@@ -9,6 +9,7 @@ return {
         "<localleader>c",
         function() end,
         desc = "Hoogle",
+        ft = "haskell",
       },
       {
         "<localleader>cl",
@@ -16,6 +17,7 @@ return {
           vim.lsp.codelens.run()
         end,
         desc = "Refresh code lenses",
+        ft = "haskell",
       },
       {
         "<localleader>hs",
@@ -23,6 +25,7 @@ return {
           require("haskell-tools").hoogle.hoogle_signature()
         end,
         desc = "Hoogle search for the type signature of the definition under the cursor",
+        ft = "haskell",
       },
       {
         "<localleader>ea",
@@ -30,6 +33,7 @@ return {
           require("haskell-tools").lsp.buf_eval_all()
         end,
         desc = "Evaluate all code snippets",
+        ft = "haskell",
       },
       {
         "<localleader>rr",
@@ -37,6 +41,7 @@ return {
           require("haskell-tools").repl.toggle()
         end,
         desc = "Toggle a GHCi repl for the current package",
+        ft = "haskell",
       },
       {
         "<localleader>rf",
@@ -44,6 +49,7 @@ return {
           require("haskell-tools").repl.toggle(vim.api.nvim_buf_get_name(0))
         end,
         desc = "Toggle a GHCi repl for the current buffer",
+        ft = "haskell",
       },
       {
         "<localleader>rq",
@@ -51,17 +57,11 @@ return {
           require("haskell-tools").repl.quit()
         end,
         desc = "Quit the GHCi repl",
+        ft = "haskell",
       },
     },
-    -- load the plugin when opening one of the following file types
-    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
   {
     "mrcjkb/neotest-haskell",
-    -- TODO: temporarily disabled, because IDK how to set up luarocks for neovim on nixos?
-    -- enabled = false,
-    -- opts = {
-    --   rocks = { hererocks = true },
-    -- }
   },
 }

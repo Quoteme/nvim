@@ -63,9 +63,9 @@ local function render_equation(equation, start_row, start_col, end_row, end_col)
   image:render()
 end
 
-map({ "n", "v" }, "<localleader>r", function()
-  local equation, start_row, start_col, end_row, end_col = get_latex_equation()
-  if equation then
-    render_equation(equation, start_row, start_col, end_row, end_col)
-  end
-end, { noremap = true, silent = true })
+-- map({ "n", "v" }, "<localleader>r", function()
+--   local equation, start_row, start_col, end_row, end_col = get_latex_equation()
+--   if equation then
+--     render_equation(equation, start_row, start_col, end_row, end_col)
+--   end
+-- end, { noremap = true, silent = true })

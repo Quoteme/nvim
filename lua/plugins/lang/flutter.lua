@@ -8,4 +8,11 @@ return {
     },
     config = true,
   },
+  {
+    "nvim-neotest/neotest",
+    dependencies = { "sidlatau/neotest-dart" },
+    opts = { adapters = { ["neotest-dart"] = {
+      use_lsp = true,
+    } } },
+  },
 }

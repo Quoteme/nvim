@@ -53,6 +53,7 @@ return {
 
   {
     "hrsh7th/nvim-cmp",
+    ft = "quarto",
     dependencies = { "jmbuhr/otter.nvim" },
     opts = function(_, opts)
       ---@param opts cmp.ConfigSchema
