@@ -7,7 +7,6 @@ return {
     end,
     keys = {
       {
-        "n",
         "<localleader>zM",
         function()
           -- select all `recipy_body` nodes from the current buffer

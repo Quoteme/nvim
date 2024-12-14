@@ -111,8 +111,7 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
-        pyright = {},
-        r_language_server = {},
+        -- r_language_server = {},
         julials = {},
         marksman = {
           -- also needs:
