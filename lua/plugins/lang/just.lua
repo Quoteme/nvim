@@ -20,6 +20,7 @@ return {
           end
         end,
         desc = "Close all recipy bodies",
+        ft = "just",
       },
     },
   },

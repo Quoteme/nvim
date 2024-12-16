@@ -14,7 +14,7 @@ return {
   {
     "rafcamlet/nvim-luapad",
     keys = {
-      { "<localleader>r", "<cmd>Luapad<cr>", mode = { "n" } },
+      { "<localleader>r", "<cmd>Luapad<cr>", mode = { "n" }, ft = "lua" },
     },
   },
 }
