@@ -28,4 +28,20 @@ return {
   -- {
   --   "evesdropper/luasnip-latex-snippets.nvim",
   -- },
+  -- {
+  --   "jczhang02/luasnips-mathtex-snippets",
+  --   config = function()
+  --     require("luasnip-latex-snippets").setup()
+  --     -- or setup({ use_treesitter = true })
+  --   end,
+  --   ft = { "tex", "markdown" },
+  -- },
+  {
+    "preservim/vim-markdown",
+    opt = true,
+    ft = "markdown",
+    config = function()
+      vim.cmd([[let g:vim_markdown_math = 1]])
+    end,
+  },
 }

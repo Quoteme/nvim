@@ -11,11 +11,5 @@
         "enabled": true
       }
     }
-  },
-  "lspconfig": {
-    "lua_ls": {
-      "Lua.runtime.version": "LuaJIT",
-      "Lua.diagnostics.globals": ["vim", "require"]
-    }
   }
 }
