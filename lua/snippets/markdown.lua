@@ -44,7 +44,7 @@ ls.add_snippets("markdown", {
   -- math inline
   s(
     {
-      trig = "mi|mathinline",
+      trig = "mi",
       trigEngine = "pattern",
       name = "Inline math formula",
       dscr = "Add an inline math block",
@@ -58,7 +58,7 @@ ls.add_snippets("markdown", {
   -- math block
   s(
     {
-      trig = "mb|mathblock",
+      trig = "mb",
       trigEngine = "pattern",
       name = "Block math formula",
       dscr = "Add a block math block",
