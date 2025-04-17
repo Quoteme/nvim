@@ -15,6 +15,9 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
+        nil_ls = {
+          mason = false,
+        },
         nixd = {
           cmd = { "nixd" },
           settings = {
