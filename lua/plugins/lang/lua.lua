@@ -33,35 +33,6 @@ return {
   --   },
   -- },
   {
-    "folke/lazydev.nvim",
-    ft = "lua", -- only load on lua files
-    opts = {
-      library = {
-        "lazy.nvim",
-        "~/.local/share/nvim/lazy/",
-        { path = "LuaSnip", words = { "luasnip" } },
-        { path = "LazyVim", words = { "LazyVim" } },
-      },
-    },
-  },
-  {
-    "saghen/blink.cmp",
-    opts = {
-      sources = {
-        -- add lazydev to your completion providers
-        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
-        providers = {
-          lazydev = {
-            name = "LazyDev",
-            module = "lazydev.integrations.blink",
-            -- make lazydev completions top priority (see `:h blink.cmp`)
-            score_offset = 100,
-          },
-        },
-      },
-    },
-  },
-  {
     "rafcamlet/nvim-luapad",
     keys = {
       { "<localleader>r", "<cmd>Luapad<cr>", mode = { "n" }, ft = "lua" },

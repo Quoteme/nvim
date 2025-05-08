@@ -22,28 +22,28 @@ return {
   --     },
   --   },
   -- },
-  -- {
-  --   "lervag/vimtex",
-  --   ft = { "tex" },
-  --   init = function()
-  --     vim.g.tex_conceal = "abdmg"
-  --     vim.g.vimtex_syntax_conceal = {
-  --       accents = true,
-  --       cites = true,
-  --       fancy = true,
-  --       greek = true,
-  --       ligatures = true,
-  --       math_bounds = true,
-  --       math_delimiters = true,
-  --       math_fracs = false,
-  --       math_super_sub = true,
-  --       math_symbols = true,
-  --       sections = false,
-  --       spacing = true,
-  --       styles = true,
-  --     }
-  --   end,
-  -- },
+  {
+    "lervag/vimtex",
+    ft = { "tex" },
+    init = function()
+      vim.g.tex_conceal = "abdg"
+      vim.g.vimtex_syntax_conceal = {
+        accents = true,
+        cites = true,
+        fancy = true,
+        greek = true,
+        ligatures = true,
+        math_bounds = false,
+        math_delimiters = false,
+        math_fracs = false,
+        math_super_sub = false,
+        math_symbols = false,
+        sections = false,
+        spacing = false,
+        styles = true,
+      }
+    end,
+  },
   -- {
   --   "Vaisakhkm2625/hologram-math-preview.nvim",
   --   dependencies = { "edluffy/hologram.nvim" },
