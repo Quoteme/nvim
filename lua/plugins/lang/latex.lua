@@ -30,8 +30,8 @@ return {
       vim.g.vimtex_syntax_conceal = {
         accents = true,
         cites = true,
-        fancy = true,
-        greek = true,
+        fancy = false,
+        greek = false,
         ligatures = true,
         math_bounds = false,
         math_delimiters = false,
@@ -42,6 +42,8 @@ return {
         spacing = false,
         styles = true,
       }
+      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_imaps_leader = "^"
     end,
   },
   -- {

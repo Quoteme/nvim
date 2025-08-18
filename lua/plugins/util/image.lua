@@ -4,10 +4,19 @@ return {
     "folke/snacks.nvim",
     ---@type snacks.Config
     opts = {
-      image = {
-        -- your image configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
+      doc = {
+        inline = false,
+        float = true,
+      },
+    },
+    keys = {
+      {
+        "<leader>k",
+        function()
+          Snacks.image.hover()
+        end,
+        desc = "Show the image in a float",
+        mode = "n",
       },
     },
   },

@@ -2,17 +2,30 @@ if vim.g.vscode then
   return {}
 else
   return {
-    {
-      --   "olimorris/onedarkpro.nvim",
-      --   priority = 1000,
-      -- },
-      -- {
-      --   "LazyVim/LazyVim",
-      --   opts = {
-      --     colorscheme = { "onelight", "onedark_dark" },
-      --   },
-      -- },
-    },
+    -- add gruvbox
+    -- { "ellisonleao/gruvbox.nvim" },
+    -- -- Configure LazyVim to load gruvbox
+    -- {
+    --   "olimorris/onedarkpro.nvim",
+    --   priority = 1000, -- Ensure it loads first
+    -- },
+    --
+    -- {
+    --   "LazyVim/LazyVim",
+    --   opts = {
+    --     colorscheme = "onelight",
+    --   },
+    -- },
+    -- {
+    --   "olimorris/onedarkpro.nvim",
+    --   priority = 1000,
+    -- },
+    -- {
+    --   "LazyVim/LazyVim",
+    --   opts = {
+    --     colorscheme = { "onelight", "onedark_dark" },
+    --   },
+    -- },
     -- return {
     --   {
     --     "newtoallofthis123/monokai-pro-light.nvim",

@@ -30,11 +30,6 @@ return {
       { "<leader>qE", ":lua require'otter'.export(true)<cr>", desc = "quarto export overwrite" },
       { "<leader>qrr", ":QuartoSendAbove<cr>", desc = "quarto run to cursor" },
       { "<leader>qra", ":QuartoSendAll<cr>", desc = "quarto run all" },
-      { "<leader><cr>", ":SlimeSend<cr>", desc = "send code chunk" },
-      { "<c-cr>", ":SlimeSend<cr>", desc = "send code chunk" },
-      { "<c-cr>", "<esc>:SlimeSend<cr>i", mode = "i", desc = "send code chunk" },
-      { "<c-cr>", "<Plug>SlimeRegionSend<cr>", mode = "v", desc = "send code chunk" },
-      { "<cr>", "<Plug>SlimeRegionSend<cr>", mode = "v", desc = "send code chunk" },
       { "<leader>ctr", ":split term://R<cr>", desc = "terminal: R" },
       { "<leader>cti", ":split term://ipython<cr>", desc = "terminal: ipython" },
       { "<leader>ctp", ":split term://python<cr>", desc = "terminal: python" },
@@ -66,6 +61,7 @@ return {
   -- like ipython, R, bash
   {
     "jpalardy/vim-slime",
+    enabled = false,
     init = function()
       vim.b["quarto_is_" .. "python" .. "_chunk"] = false
       Quarto_is_in_python_chunk = function()
@@ -103,6 +99,13 @@ return {
         { "<leader>cs", ":lua set_terminal()<cr>", desc = "set terminal" },
       })
     end,
+    keys = {
+      { "<leader><cr>", ":SlimeSend<cr>", desc = "send code chunk" },
+      { "<c-cr>", ":SlimeSend<cr>", desc = "send code chunk" },
+      { "<c-cr>", "<esc>:SlimeSend<cr>i", mode = "i", desc = "send code chunk" },
+      { "<c-cr>", "<Plug>SlimeRegionSend<cr>", mode = "v", desc = "send code chunk" },
+      { "<cr>", "<Plug>SlimeRegionSend<cr>", mode = "v", desc = "send code chunk" },
+    },
   },
 
   {
