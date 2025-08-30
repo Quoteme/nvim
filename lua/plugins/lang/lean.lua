@@ -85,7 +85,7 @@ return {
         ft = "lean",
       },
       {
-        "<LocalLeader>\\",
+        "<LocalLeader>\\\\",
         "<Cmd>LeanAbbreviationsReverseLookup<CR>",
         desc = "Show how to type the unicode character under the cursor.",
         ft = "lean",
