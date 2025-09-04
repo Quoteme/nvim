@@ -3,8 +3,17 @@ if vim.g.vscode then
 else
   return {
     -- add gruvbox
-    -- { "ellisonleao/gruvbox.nvim" },
-    -- -- Configure LazyVim to load gruvbox
+    { "ellisonleao/gruvbox.nvim", opts = {
+      contrast = "hard",
+    } },
+
+    -- Configure LazyVim to load gruvbox
+    {
+      "LazyVim/LazyVim",
+      opts = {
+        colorscheme = "gruvbox",
+      },
+    },
     -- {
     --   "olimorris/onedarkpro.nvim",
     --   priority = 1000, -- Ensure it loads first
