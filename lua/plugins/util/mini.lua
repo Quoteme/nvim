@@ -1,7 +1,15 @@
 return {
-  { "nvim-mini/mini.splitjoin" },
   {
-    "echasnovski/mini.align",
+    "nvim-mini/mini.splitjoin",
+    mappings = {
+      join = "gJ",
+    },
+    config = function(_, opts)
+      require("mini.splitjoin").setup(opts)
+    end,
+  },
+  {
+    "nvim-mini/mini.align",
     version = false,
     mappings = {
       start = "ga",
