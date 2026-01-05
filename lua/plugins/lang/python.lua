@@ -1,8 +1,11 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
     opts = {
+      ---@type lspconfig.options
       servers = {
+        -- jedi_language_server = {},
         basedpyright = {
           settings = {
             basedpyright = {
@@ -11,6 +14,11 @@ return {
                 autoImportCompletions = true,
               },
             },
+          },
+        },
+        ty = {
+          settings = {
+            ty = {},
           },
         },
         -- pylsp = {

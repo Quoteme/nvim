@@ -11,9 +11,9 @@ local function set_snacks_highlight()
     })
   else
     vim.api.nvim_set_hl(0, "SnacksImageMath", {
-      fg = "#161616", -- dark brown
-      bg = "#161616",
-      italic = true,
+      fg = "#000000", -- dark brown
+      bg = "#ffffff",
+      italic = false,
     })
   end
 end

@@ -1,3 +1,4 @@
+local dark = vim.o.background == "dark"
 return {
   -- lazy.nvim
   {
@@ -5,8 +6,8 @@ return {
     ---@type snacks.Config
     opts = {
       doc = {
-        inline = false,
-        float = true,
+        inline = true,
+        float = false,
       },
     },
     keys = {

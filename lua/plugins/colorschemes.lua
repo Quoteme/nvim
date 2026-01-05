@@ -3,21 +3,40 @@ if vim.g.vscode then
 else
   return {
     -- add gruvbox
-    { "ellisonleao/gruvbox.nvim", opts = {
-      contrast = "hard",
-    } },
-
-    -- Configure LazyVim to load gruvbox
-    {
-      "LazyVim/LazyVim",
-      opts = {
-        colorscheme = "gruvbox",
-      },
-    },
+    -- { "ellisonleao/gruvbox.nvim", opts = {
+    --   contrast = "hard",
+    -- } },
+    --
+    -- -- Configure LazyVim to load gruvbox
     -- {
-    --   "olimorris/onedarkpro.nvim",
-    --   priority = 1000, -- Ensure it loads first
+    --   "LazyVim/LazyVim",
+    --   opts = {
+    --     colorscheme = "gruvbox",
+    --   },
     -- },
+
+    -- {
+    --   "navarasu/onedark.nvim",
+    --   priority = 1000, -- make sure to load this before all the other start plugins
+    --   config = function()
+    --     require("onedark").setup({
+    --       style = "darker",
+    --     })
+    --     -- Enable theme
+    --     require("onedark").load()
+    --   end,
+    -- },
+
+    {
+      "rebelot/kanagawa.nvim",
+      config = function()
+        require("kanagawa").setup({
+          -- You can add Kanagawa-specific configurations here
+        })
+        vim.cmd("colorscheme kanagawa")
+      end,
+    },
+
     --
     -- {
     --   "LazyVim/LazyVim",
