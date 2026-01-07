@@ -27,13 +27,20 @@ else
     --   end,
     -- },
 
+    -- {
+    --   "rebelot/kanagawa.nvim",
+    --   config = function()
+    --     require("kanagawa").setup({
+    --       -- You can add Kanagawa-specific configurations here
+    --     })
+    --     vim.cmd("colorscheme kanagawa")
+    --   end,
+    -- },
     {
-      "rebelot/kanagawa.nvim",
+      "kepano/flexoki-neovim",
+      name = "flexoki",
       config = function()
-        require("kanagawa").setup({
-          -- You can add Kanagawa-specific configurations here
-        })
-        vim.cmd("colorscheme kanagawa")
+        vim.cmd("colorscheme flexoki")
       end,
     },
 
