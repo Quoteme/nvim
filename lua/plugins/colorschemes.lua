@@ -36,13 +36,13 @@ else
     --     vim.cmd("colorscheme kanagawa")
     --   end,
     -- },
-    {
-      "kepano/flexoki-neovim",
-      name = "flexoki",
-      config = function()
-        vim.cmd("colorscheme flexoki")
-      end,
-    },
+    -- {
+    --   "kepano/flexoki-neovim",
+    --   name = "flexoki",
+    --   config = function()
+    --     vim.cmd("colorscheme flexoki")
+    --   end,
+    -- },
 
     --
     -- {

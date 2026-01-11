@@ -2,7 +2,7 @@ return {
   {
     "mtrajano/tssorter.nvim",
     version = "*", -- latest stable version, use `main` to keep up with the latest changes
-    vscode=true,
+    vscode = true,
     ---@module "tssorter"
     ---@type TssorterOpts
     opts = {

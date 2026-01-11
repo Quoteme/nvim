@@ -25,3 +25,20 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   callback = set_snacks_highlight,
 })
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "TSUpdate",
+  callback = function()
+    require("nvim-treesitter.parsers").typst = {
+      install_info = {
+        url = "https://github.com/Quoteme/tree-sitter-typst",
+        -- revision = HEAD,
+        branch = "add-utf8-delimiters",
+        -- location = "parser", -- only needed if the parser is in subdirectory of a "monorepo"
+        -- generate = true, -- only needed if repo does not contain pre-generated `src/parser.c`
+        -- generate_from_json = false, -- only needed if repo does not contain `src/grammar.json` either
+        -- queries = "queries/neovim", -- also install queries from given directory
+      },
+    }
+  end,
+})

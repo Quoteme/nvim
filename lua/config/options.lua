@@ -14,3 +14,6 @@ vim.g.lazyvim_python_lsp = "basedpyright"
 
 vim.o.exrc = true
 vim.o.secure = true
+
+-- custom brackets
+vim.opt.matchpairs:append("⟨:⟩,⟪:⟫,⌈:⌉,⌊:⌋,⟦:⟧,⦃:⦄,⦅:⦆,〈:〉")
