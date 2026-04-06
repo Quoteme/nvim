@@ -11,6 +11,7 @@ vim.opt.textwidth = 80
 vim.opt.spelllang = "en,de"
 vim.opt.colorcolumn = "+1"
 vim.g.lazyvim_python_lsp = "basedpyright"
+vim.g.snacks_animate = false
 
 vim.o.exrc = true
 vim.o.secure = true

@@ -2,6 +2,7 @@ return {
   {
     "chomosuke/typst-preview.nvim",
     lazy = false, -- or ft = 'typst'
+    vscode = false,
     version = "1.*",
     opts = {}, -- lazy.nvim will implicitly calls `setup {}`
   },
@@ -30,7 +31,9 @@ return {
           settings = {
             formatterMode = "typstyle",
             exportPdf = "never",
-            semanticTokens = "disable",
+            semanticTokens = "enabled",
+            -- semanticTokens = "disable",
+            syntaxOnly = "enable",
           },
         },
       },

@@ -44,6 +44,24 @@ else
       end,
     },
 
+    -- {
+    --   "RRethy/base16-nvim",
+    --   config = function()
+    --     -- check if ~/.config/noctalia/user-templates.toml exists
+    --     if vim.fn.filereadable(vim.fn.expand("~/.config/noctalia/user-templates.toml")) == 1 then
+    --       require("base16").setup({
+    --         -- theme = "noctalia",
+    --         theme = "noctalia-light",
+    --       })
+    --     else
+    --       require("base16").setup({
+    --         theme = "noctalia-light",
+    --       })
+    --     end
+    --     require("matugen").setup()
+    --   end,
+    -- },
+
     --
     -- {
     --   "LazyVim/LazyVim",
